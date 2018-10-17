@@ -1,0 +1,250 @@
+$main_color: #212121;
+$bgcolro: #f5f6fa;
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: $bgcolro;
+}
+header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: $bgcolro;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  nav.navigationbar{
+    width: 90%;
+    margin: auto;
+    background-color: $bgcolro;
+    line-height: 50px;
+    height: 50px;
+    box-shadow: none;
+.sidenav-trigger{
+  i{
+    line-height: 50px;
+    font-size: 30px;
+  }
+}
+    .brand-logo{
+      img{
+      width: 200px;
+      }
+    }
+    a{
+      color: black;
+    }
+  }
+}
+.sidenav{
+  .brand-logo{
+    img{
+    width: 200px;
+    }
+  }
+  li{
+    transition: all 0.4s;
+    &:hover{
+      background-color: #dbdbdb;
+    }
+  }
+}
+.bannar{
+  background: $bgcolro url('./image/bannar.png') no-repeat center center /cover;
+  width: 100%;
+  height: 100vh;
+}
+
+#about_section{
+  .content1{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .content2 .box{
+    text-align: center;
+    i{
+      font-size: 50px;
+      color: lighten($main_color, 10);
+    }
+  }
+}
+
+// this is for swiper js
+.swiper-container {
+      width: 100%;
+      background-color: $main_color;
+      padding: 20px;
+    }
+    .swiper-slide {
+      width: 300px;
+      padding: 0;
+      margin: 40px 0;
+      img{
+        width: 100%;
+      }
+    }
+
+
+#service{
+  width: 100%;
+  background: $main_color url('image/img.jpg') no-repeat center center /cover fixed;
+  background-blend-mode: multiply;
+  .title{
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+  }
+  .content{
+    color: #fff;
+  }
+  .content .col{
+    margin:25px 0 20px 0;
+    text-align: center;
+    a{
+      color: #64DD17;
+      &:hover{
+        color: rgba($color: gray, $alpha: 0.7);
+      }
+    }
+    i{
+      font-size: 40px;
+    }
+  }
+}
+
+
+// meet out team
+#team{
+  width: 100%;
+  width: 85%;
+  margin: auto;
+  .title,.info{
+    text-align: center;
+  }
+  .content{
+    display: flex;
+    flex-wrap: wrap;
+    .box{
+      width: 24%;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      transition: all 0.5s;
+      padding: 0;
+      margin: 5px auto auto;
+      cursor: pointer;
+      &:hover{
+        box-shadow: 0 2px 15px #222222;
+      }
+      img{
+        width: 100%;
+        height: auto;
+      }
+
+      .name{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: $main_color;
+        color: white;
+        P{
+          margin: 0;
+          padding: 3px 0;
+          font-size: 18px;
+          font-weight: bold;
+          &:nth-child(2){
+            font-size: 14px;
+            font-weight: 500;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+#map{
+  width: inherit;
+  margin: 40px 0;
+  iframe{
+    width: 100%;
+    height: 450px;
+  }
+}
+
+#contact{
+  background-color: $main_color;
+  padding: 10px 0;
+  margin: 10px 0;
+  .title{
+    text-align: center;
+    color: $bgcolro;
+  }
+}
+
+#footer_center{
+  background-color: $main_color;
+.content.row{
+  margin-bottom: 0;
+}
+  .content{
+    color: $bgcolro;
+    width: 90%;
+    padding-top: 10px;
+    a{
+      color: $bgcolro;
+    }
+  }
+}
+
+footer{
+  background-color: lighten($main_color, 10);
+  width: inherit;
+  .content{
+    width: 90%;
+    margin: auto;
+    position: relative;
+  }
+  .meta-data{
+    line-height: 60px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    span::after{
+      content: " | ";
+      color: gray;
+    }
+  }
+  .social{
+    position: absolute;
+    right: 0;
+    li{
+      display: inline-block;
+      padding: 0 10px;
+      a{
+        color: $bgcolro;
+      }
+      i{
+        font-size: 25px;
+      }
+    }
+  }
+  .rights{
+    margin: 0;
+    padding: 3px 0;
+    color: white;
+    span{
+      text-decoration: underline;
+    }
+  }
+}
+@media (max-width: 800px){
+  #team .content .box{
+    width: 30%;
+  }
+}
